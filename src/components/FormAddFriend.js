@@ -34,6 +34,7 @@ function FormAddFriend({ onAddFriend }) {
         type="text"
         value={image}
         onChange={e => setImage(e.target.value)}
+        disabled
       />
 
       <Button>Add</Button>
