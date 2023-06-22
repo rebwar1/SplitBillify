@@ -31,6 +31,17 @@ function App() {
   function handleShowAddFriends() {
     setShowAddFriends(show => !show);
   }
+  function handleSelectFriend(value) {
+    setFriends(friends =>
+      friends.map(friend =>
+        friend.id === selectFriend.id
+          ? { ...friend, balance: friend.balance + value }
+          : friend
+      )
+    );
+
+    setSelectFriend(null);
+  }
   return (
     <div className="app">
       <div className="leftSide">
@@ -42,7 +53,13 @@ function App() {
         </Button>
       </div>
       <div className="friends">
-        <SplitBill />
+        {selectFriend && (
+          <SplitBill
+            onSelectFriend={handleSelectFriend}
+            selectFriend={selectFriend}
+            key={selectFriend.id}
+          />
+        )}
       </div>
     </div>
   );

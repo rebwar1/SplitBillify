@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-function SplitBill() {
+function SplitBill({ onSelectFriend, selectFriend }) {
   return (
     <form className="form-split-bill">
       <h2>SPLIT A BILL WITH ...</h2>
