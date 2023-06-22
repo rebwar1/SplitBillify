@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FriendList from "./components/FriendList";
 import Button from "./components/Button";
 import FormAddFriend from "./components/FormAddFriend";
+import SplitBill from "./components/SplitBill";
 
 const initialFriends = [
   {
@@ -41,7 +42,7 @@ function App() {
         </Button>
       </div>
       <div className="friends">
-        <h2>Friends</h2>
+        <SplitBill />
       </div>
     </div>
   );
