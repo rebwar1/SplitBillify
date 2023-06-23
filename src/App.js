@@ -7,14 +7,14 @@ import SplitBill from "./components/SplitBill";
 const initialFriends = [
   {
     id: 118836,
-    name: "Clark",
-    image: "https://i.pravatar.cc/48?u=118836",
+    name: "Azad",
+    image: "https://i.pravatar.cc/48?u=118893",
     balance: -7,
   },
   {
     id: 933372,
-    name: "Sarah",
-    image: "https://i.pravatar.cc/48?u=933372",
+    name: "Rebwar",
+    image: "https://i.pravatar.cc/48?u=933380",
     balance: 20,
   },
 ];
