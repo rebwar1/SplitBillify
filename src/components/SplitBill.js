@@ -15,7 +15,7 @@ function SplitBill({ onSelectFriend, selectFriend }) {
   }
   return (
     <form className="form-split-bill" onSubmit={handleSubmit}>
-      <h2>SPLIT A BILL WITH ...</h2>
+      <h2>SPLIT A BILL WITH {selectFriend.name}</h2>
       <label>Bill Amount</label>
       <input
         type="text"
