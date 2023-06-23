@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FriendList from "./components/FriendList";
+import FriendsList from "./components/FriendList";
 import Button from "./components/Button";
 import FormAddFriend from "./components/FormAddFriend";
 import SplitBill from "./components/SplitBill";
@@ -42,10 +42,18 @@ function App() {
 
     setSelectFriend(null);
   }
+  function handleSelection(friend) {
+    setSelectFriend(cur => (cur?.id === friend.id ? null : friend));
+    setShowAddFriends(false);
+  }
   return (
     <div className="app">
       <div className="leftSide">
-        <FriendList friends={friends} />
+        <FriendsList
+          friends={friends}
+          selectedFriend={selectFriend}
+          onSelection={handleSelection}
+        />
         {showAddFriends && <FormAddFriend onAddFriend={handleAddFriend} />}
 
         <Button onClick={handleShowAddFriends}>
